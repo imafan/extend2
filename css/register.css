@@ -1,0 +1,574 @@
+.top
+{
+	background-color: #0370d9;
+    background-image: url("../images/top.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 178px;
+    width: 100%;
+}
+
+.register_body
+{
+	margin: 0 auto;
+    width: 1200px;
+}
+
+/* 标题状态栏的样式 */
+.register_body .title_box
+{
+	background-image: url("../images/title_bg.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    height: 170px;
+    margin-top: 20px;
+    padding-left: 35px;
+}
+
+.register_body .title_box .title
+{
+	color: #333;
+    font-size: 32px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.register_body .title_box .process_status
+{
+	    font-size: 14px;
+}
+
+.register_body .title_box .process_status .process
+{
+	color: #666;
+    float: left;
+}
+
+.register_body .title_box .process_status .status
+{
+	color: #555;
+    float: left;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.register_body .title_box .submit_btn_box
+{
+	height: 70px;
+    line-height: 70px;
+}
+
+.register_body .title_box .submit_btn_box .submit_btn
+{
+	background-color: #36a9e5;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    width: 100px;
+}
+
+.register_body .title_box .submit_btn_box .tips
+{
+	color: #999;
+    margin-left: 10px;
+}
+
+/* end */
+
+.register_body .tab_box
+{
+	border-bottom: 4px solid #00a0ea;
+    height: 36px;
+    margin-top: 33px;
+}
+
+.register_body .tab_box li
+{
+	background-color: #e6e6e6;
+    background-image: url("../images/unfinish_icon.png");
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    border-color: #666;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #333;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 10px;
+    padding: 0 16px 0 30px;
+}
+
+.register_body .tab_box li.active
+{
+	background-color: #00a0ea;
+	border-color: #00a0ea;
+	color: #fff;
+}
+
+.register_body .tab_box li:hover
+{
+	background-color: #00a0ea;
+	border-color: #00a0ea;
+	color: #fff;
+}
+
+.register_body .tab_box li.finished
+{
+	background-image: url("../images/finish_icon.png");
+}
+
+.register_body .tab_box .tips_desc
+{
+	color: #999;
+    float: right;
+    line-height: 36px;
+    margin-right: 10px;
+}
+
+.register_body .tab_box .tips_desc span
+{
+	background-repeat: no-repeat;
+    padding: 0 18px;
+}
+
+.register_body .tab_box .tips_desc .desc_fin
+{
+	background-image: url("../images/des_finish.png");
+}
+
+.register_body .tab_box .tips_desc .desc_un
+{
+	background-image: url("../images/des_unfinish.png");
+}
+
+.register_body .form_list .re_table
+{
+	border-color: #717171;
+    border-style: solid;
+    border-width: 2px 1px 1px 2px;
+    margin: 10px 0 20px;
+}
+
+.register_body .form_list .table_head
+{
+	background-color: #eee;
+    border-bottom: 2px solid #717171;
+    border-right: 1px solid #717171;
+    font-size: 16px;
+    font-weight: bold;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 15px;
+}
+
+.register_body .form_list .table_item_tr
+{
+	border-bottom: 1px solid #717171;
+    height: 46px;
+    line-height: 46px;
+}
+
+.register_body .form_list .table_item_htr
+{
+	border-bottom: 1px solid #717171;
+    height: 110px;
+    line-height: 110px;
+}
+
+.register_body .form_list .table_item_tr .table_item_td
+{
+	border-right: 1px solid #717171;
+    display: table-cell;
+    line-height: 46px;
+}
+
+.register_body .form_list .submit_btn
+{
+	padding: 30px 0;
+    text-align: center;
+}
+
+.register_body .form_list .submit_btn a
+{
+	background-color: #36a9e5;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    width: 100px;
+}
+
+.register_body .form_list .title_info
+{
+	margin: 18px 0 9px;
+}
+
+.register_body .form_list .title_info span
+{
+	font-size: 18px;
+}
+
+.register_body .form_list .title_info a
+{
+	background-color: #7bcf31;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    width: 100px;
+}
+
+.register_body .form_list .apply_form
+{
+
+}
+
+.register_body .form_list .apply_form .basic_info .item_title
+{
+	color: #222;
+    font-size: 15px;
+    width: 182.5px;
+}
+
+.register_body .form_list .apply_form .basic_info .item_title .necesarry
+{
+	color: red;
+    padding: 0 10px;
+}
+
+.register_body .form_list .apply_form .basic_info .item_body
+{
+	width: 414px;
+}
+
+.register_body .form_list .apply_form .basic_info .item_body input
+{
+	background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 33px;
+    margin-left: 10px;
+    padding-left: 10px;
+    width: 383px;
+}
+
+
+.register_body .form_list .apply_form .team_info .item_sub
+{
+	color: #333;
+    font-size: 15px;
+    text-align: center;
+    width: 199.5px;
+}
+
+.register_body .form_list .apply_form .team_info .item_title
+{
+	font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    width: 198.5px;
+}
+
+.register_body .form_list .apply_form .team_info .item_body
+{
+	width: 198.5px;
+}
+
+.register_body .form_list .apply_form .team_info .item_body input
+{
+	background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 33px;
+    margin-left: 4px;
+    padding-left: 10px;
+    width: 178px;
+}
+
+.register_body .form_list .apply_form .team_info .item_operate
+{
+	text-align: center;
+    width: 198.5px;
+}
+
+.register_body .form_list .apply_form .team_info .item_operate a.add
+{
+	color: blue;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.register_body .form_list .apply_form .founder_introduce_info .item_desc
+{
+	border-bottom: 1px solid #717171;
+    border-right: 1px solid #717171;
+    height: 105px;
+    line-height: 105px;
+}
+
+.register_body .form_list .apply_form .founder_introduce_info textarea
+{
+	background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 90px;
+    margin-left: 10px;
+    margin-top: 6px;
+    padding-left: 10px;
+    width: 1166px;
+}
+
+.register_body .form_list .apply_form .incubator_info .item_desc
+{
+	border-bottom: 1px solid #717171;
+    border-right: 1px solid #717171;
+    height: 105px;
+    line-height: 105px;
+}
+
+.register_body .form_list .apply_form .incubator_info textarea
+{
+	background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 90px;
+    margin-left: 10px;
+    margin-top: 6px;
+    padding-left: 10px;
+    width: 1166px;
+}
+
+/* 项目一览表 */
+
+.register_body .form_list .project_form .table_item_thead
+{
+	background-color: #eee;
+    border-bottom: 2px solid #717171;
+    color: #333;
+    font-size: 15px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.register_body .form_list .project_form .table_item_thead .table_item_th
+{
+	border-right: 1px solid #717171;
+    display: table-cell;
+    text-align: center;
+}
+
+.register_body .form_list .project_form .table_item_tr .item_body input
+{
+	background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 33px;
+    margin-left: 6px;
+    padding-left: 10px;
+    width: 132px;
+}
+
+.register_body .form_list .project_form .table_item_tr .item_body:first-child input
+{
+	width: 195px;
+}
+
+.register_body .form_list .project_form .table_item_tr .item_body:nth-child(5) input
+{
+	width: 280px;
+}
+
+.register_body .form_list .project_form .table_item_tr .item_operate
+{
+	text-align: center;
+}
+
+.register_body .form_list .project_form .table_item_tr .item_operate a
+{
+	color: red;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+/* 活动样式 */
+
+.register_body .form_list .activity_form .table_item_thead
+{
+	background-color: #eee;
+    border-bottom: 2px solid #717171;
+    color: #333;
+    font-size: 15px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.register_body .form_list .activity_form .table_item_thead .table_item_th
+{
+	border-right: 1px solid #717171;
+    display: table-cell;
+    text-align: center;
+}
+
+.register_body .form_list .activity_form .item_sub
+{
+	color: #333;
+    font-size: 15px;
+    text-align: center;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td
+{
+	border-right: 1px solid #717171;
+    display: table-cell;
+    line-height: 110px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td input
+{
+	background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 33px;
+    margin: 0 6px;
+    padding-left: 10px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td:first-child input
+{
+	width: 76px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td:nth-child(2) input
+{
+	width: 149px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td:nth-child(3) input
+{
+	width: 176px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td:nth-child(4) input
+{
+	width: 56px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td:nth-child(5) input
+{
+	width: 76px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .table_item_td:nth-child(6) input
+{
+	width: 96px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .item_picture li
+{
+	display: inline-block;
+    position: relative;
+    width: 78px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .item_picture li img
+{
+    height: 58px;
+    left: 10px;
+    position: absolute;
+    top: 15px;
+    width: 58px;
+}
+
+.register_body .form_list .activity_form .table_item_htr .item_picture li span
+{
+
+}
+
+.register_body .form_list .activity_form .table_item_htr .item_operate
+{
+	text-align: center;
+}
+
+.register_body .form_list .activity_form .table_item_htr .item_operate a
+{
+	color: red;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+/* 计划样式 */
+
+.register_body .form_list .plan_form .item_plan_desc
+{
+	border-bottom: 1px solid #717171;
+    border-right: 1px solid #717171;
+    padding: 6px;
+}
+
+.register_body .form_list .plan_form .item_plan_desc textarea
+{
+	background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    min-height: 300px;
+    padding: 10px;
+    width: 98%;
+}
+
+/* 附件样式*/
+
+
+.register_body .form_list .accessory_form .table_item_thead
+{
+	background-color: #eee;
+    border-bottom: 2px solid #717171;
+    color: #333;
+    font-size: 15px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.register_body .form_list .accessory_form .table_item_thead .table_item_th
+{
+	border-right: 1px solid #717171;
+    display: table-cell;
+    text-align: left;
+    text-indent: 30px;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td
+{
+	border-right: 1px solid #717171;
+    display: table-cell;
+    height: 110px;
+    line-height: 110px;
+}

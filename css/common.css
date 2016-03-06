@@ -1,0 +1,230 @@
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+	color:#000;
+	background:#fff;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/* public */
+body {
+	margin: 0 auto;
+	font-size: 12px;
+	font-family: Arial, tahoma, "微软雅黑" !important;
+	line-height: 1.5;
+	background: #fff;
+	min-width: 1100px;
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style: normal;
+	font-weight: 500;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,
+th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0;
+}
+
+ul,dl,dd,h1,h2,h3,h4,h5,h6,form,p {
+	padding: 0;
+	margin: 0;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,button,input,select,textarea{
+	font:12px/1.5 "\5fae\8f6f\96c5\9ed1","\534e\6587\7ec6\9ed1",tahoma,arial,\5b8b\4f53;
+}
+input,select,textarea{
+	font-size:100%;
+}
+/* 取消chrome浏览器下input和textarea的默认样式 */
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+
+/* 去除默认边框 */
+fieldset,img {
+	border: 0;
+	vertical-align: middle;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+	display:block;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym{
+	border:0;font-variant:normal;
+}
+
+/* 一致的 del 样式 */
+del {
+	text-decoration:line-through;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,ul {
+	list-style:none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {
+	text-align:left;
+}
+
+span {
+	vertical-align: baseline;
+}
+a {
+	color: #4889FB; /* #444 */
+	text-decoration: none;
+}
+
+a:hover {
+	color: #f00;
+}
+
+a:focus{
+	outline:none;
+}
+
+a.green {
+	color: green;
+}
+.gray {
+	color: #8C8C8C;
+}
+
+/*colors*/
+.orange{ color: #F60!important;}
+.gray{ color: #999!important;}
+.darkgray{ color:#666!important}
+.red{ color:#F00!important;}
+.blue{ color:#06C!important;}
+.green{ color:#390!important;}
+.black{ color:#000;}
+
+.clear {
+	clear: both;
+	height: 0;
+	font-size: 0px;
+	line-height: 0px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.hr {
+	background: none repeat scroll 0 0 #FBFBFB;
+	border-top: 1px solid #DFDFDF;
+	clear: both;
+	display: block;
+	font-size: 0;
+	height: 1px;
+	line-height: 0;
+	overflow: hidden;
+}
+i.sep {
+	background: none repeat scroll 0 0 #C8C8D0;
+	display: inline-block;
+	height: 12px;
+	margin: 0 10px;
+	vertical-align: middle;
+	width: 1px;
+}
+.cc{*zoom:1;}
+.cc:after{content:'\20';display:block;height:0;clear:both;visibility: hidden;}
+.c{clear:both;font:0px/0px Arial;overflow:hidden;height:0;width:0;}
+
+.loading {
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url(../images/common/loading05.gif) no-repeat center center;
+	text-indent: -1000px;
+	overflow: hidden;
+}
+
+*===============================base=================================*/
+
+/*text*/
+.tal{ text-align:left!important;}
+.tar{ text-align:right!important;}
+.tac{ text-align:center!important;}
+.vat{ vertical-align:top!important;}
+.vam{ vertical-align:middle!important;}
+.ti2em{ text-indent:2em!important;}
+.tlf{table-layout:fixed!important;}
+.nowrap{ white-space:nowrap!important;; word-break:normal!important;}
+
+/*margin*/
+.mg0{ margin: 0 !important; }
+.mt3{ margin-top: 3px !important; }
+.mt5{ margin-top: 5px !important; }
+.mt10{ margin-top: 10px !important; }
+.mt15{ margin-top: 15px !important; }
+.mt20{ margin-top: 20px !important; }
+.mt25{ margin-top: 25px !important; }
+.mt30{ margin-top: 30px !important; }
+
+.mr5{ margin-right: 5px !important; }
+.mr10{ margin-right: 10px !important; }
+.mr20{ margin-right: 20px !important; }
+
+.mb10 {
+	margin-bottom: 10px !important;
+}
+
+.pd0{ padding: 0 !important; }
+.pd10{ padding: 10px !important; }
+.pd20{ padding: 20px !important; }
+
+.taleft{ text-align: left !important; }
+.taright{ text-align: right !important; }
+.tac,.tacenter{ text-align: center !important; }
+.tac { text-align: center !important; }
+
+.fs12{ font-size: 12px !important; }
+.fs14{ font-size: 14px !important; }
+.fs20{ font-size: 20px !important; }
+
+.nowrap{ white-space: nowrap !important; }
+.forcewrap{ 
+	display:inline-block; 
+	*zoom:1; 
+	*display:inline; 
+	white-space:normal!important; 
+	word-wrap:break-word!important; 
+	word-break:break-all!important;
+}
+/* form */
+.fm-item{ width:720px; overflow:hidden; clear:both; padding:8px 0px; border:1px solid #FFF; border-radius:3px; line-height:18px; }
+.fm-title{ width:112px; float:left; text-align:right; overflow:hidden; padding:4px 8px 4px 0px; }
+.fm-field{ width:600px; float:left; padding:4px 0px; }
+.fm-field span{ margin:0px 4px; }
+.fm-field span.error-msg{ color:#F60; }
+.fm-field label span{ margin:0; }
+.form-tip-box{ margin: 0 0 0 10px; }
+.fm-submit{ padding:8px 0px; overflow:hidden; }
+.fm-text{ margin: -3px 0 0; padding: 4px; line-height: 16px; border: 1px solid #CCC; border-radius: 3px; background: #FFF url(../images/uc/input-text-bg.png) repeat-x; vertical-align: middle; }
+.fm-text:focus{ border-color:#F60; }
+.fm-text-tip{ color:#CCC;}
+
+*===============================base=================================*/
+
+
