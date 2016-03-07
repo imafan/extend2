@@ -29,10 +29,10 @@
 
     <div class="tab_box">
         <ul>
-            <li class="active">孵化器基本信息表</li>
-            <li class="finished">在孵企业情况汇总表</li>
-            <li class="finished">毕业企业情况汇总表</li>
-            <li>附件清单及证明材料</li>
+            <li class="active" id="apply_form">孵化器基本信息表</li>
+            <li class="finished" id="company_table">在孵企业情况汇总表</li>
+            <li class="finished" id="graduate_table">毕业企业情况汇总表</li>
+            <li id="accessory_form">附件清单及证明材料</li>
         </ul>
 
         <div class="tips_desc">
@@ -43,7 +43,7 @@
 
     <div class="form_list">
 
-        <div class="apply_form" style="display: block;">
+        <div class="apply_form form_hide form_show">
             <form action="">
 
                 <div class="re_table basic_info">
@@ -216,13 +216,13 @@
             </form>
         </div>
 
-        <div class="company_table">
+        <div class="company_table form_hide">
 
             <form action="">
 
                 <div class="title_info">
                     <span>在孵企业情况汇总表</span>
-                    <a>新增企业</a>
+                    <a onclick="addCompany()">新增企业</a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -253,7 +253,7 @@
                         <div class="table_item_td item_body" style="width: 8%"><input type="text"/></div>
                         <div class="table_item_td item_body" style="width: 8%"><input type="text"/></div>
                         <div class="table_item_td item_body" style="width: 9%"><input type="text"/></div>
-                        <div class="table_item_td item_operate" style="width: 9%"><a class="add">删除</a></div>
+                        <div class="table_item_td item_operate" style="width: 9%"><a class="del" onclick="delTr(this)">删除</a></div>
 
                     </div>
                 </div>
@@ -263,13 +263,13 @@
             </form>
         </div>
 
-        <div class="graduate_table">
+        <div class="graduate_table form_hide">
 
             <form action="">
 
                 <div class="title_info">
                     <span>毕业企业情况汇总表</span>
-                    <a>新增企业</a>
+                    <a onclick="addGraduate()">新增企业</a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -299,7 +299,7 @@
                         <div class="table_item_td item_body" style="width: 9%"><input type="text"/></div>
                         <div class="table_item_td item_body" style="width: 9%"><input type="text"/></div>
                         <div class="table_item_td item_body" style="width: 8%"><input type="text"/></div>
-                        <div class="table_item_td item_operate" style="width: 9%"><a class="add">删除</a></div>
+                        <div class="table_item_td item_operate" style="width: 9%"><a class="del" onclick="delTr(this)">删除</a></div>
                     </div>
                 </div>
 
@@ -309,7 +309,7 @@
 
 
 
-        <div class="accessory_form">
+        <div class="accessory_form form_hide">
 
             <form action="">
 
@@ -459,48 +459,9 @@
 
 </div>
 
-<script src="js/jquery-1.7.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
 <script src="js/ajaxfileupload.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function(){
+<script src="js/incubator.js" type="text/javascript"></script>
 
-    //附件上传
-    $("body").on("change","input.upload:file",function(){
-        var $me = $(this);
-        var _fileElementId = $me.attr("id");
-
-        if(_fileElementId){
-            //TODO 文件类型、大小过滤
-
-            //上传
-            $.ajaxFileUpload ({
-                url :'demodata/upload.json',
-                secureuri :false,
-                fileElementId : _fileElementId.substring(1),
-                dataType : 'json',
-                success : function (res, status){
-
-                    if(res.success){
-
-                        alert("上传成功");
-
-                        $me.siblings("img").attr("src", res.data.url);
-
-                        $me.closest(".zip_image").siblings(".info").empty();
-                        var _infoHtml = "<dl><dt><a href='#'>" + res.data.name + "</a></dt>"
-                                        + "<dt class='info_flow'>" + res.data.size + "</dt></dl>";
-                        $me.closest(".zip_image").siblings(".info").append(_infoHtml);
-//                        $me.siblings(":not('img')").remove();
-                        $me.remove();
-                    }
-                },
-                error: function (data, status, e){
-                    console.info(e);
-                }
-            })
-        }
-    })
-})
-</script>
 </body>
 </html>

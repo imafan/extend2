@@ -151,6 +151,16 @@
 	background-image: url("../images/des_unfinish.png");
 }
 
+.register_body .form_list .form_hide
+{
+    display: none;
+}
+
+.register_body .form_list .form_show
+{
+    display: block;
+}
+
 .register_body .form_list .re_table
 {
 	border-color: #717171;
@@ -229,6 +239,7 @@
     border: medium none;
     border-radius: 3px;
     color: #fff;
+    cursor: pointer;
     display: inline-block;
     float: right;
     font-size: 14px;
@@ -449,7 +460,7 @@
     width: 80%;
 }
 
-.register_body .form_list .company_table .table_item_tr .item_operate a
+.register_body .form_list .graduate_table .table_item_tr .item_operate a
 {
     color: red;
     cursor: pointer;

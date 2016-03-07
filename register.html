@@ -5,6 +5,9 @@
 	<title>广东省众创空间</title>
 	<link rel="stylesheet" type="text/css" href="css/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/register.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
+
 </head>
 <body>
 
@@ -28,11 +31,11 @@
 
 		<div class="tab_box">
 			<ul>
-				<li class="active">众创空间登记申请表</li>
-				<li class="finished">孵化项目（企业）</li>
-				<li>单位活动一览表</li>
-				<li>工作总结及计划</li>
-				<li>附件清单</li>
+				<li class="active" id="apply_form">众创空间登记申请表</li>
+				<li class="finished" id="project_form">孵化项目（企业）</li>
+				<li id="activity_form">单位活动一览表</li>
+				<li id="plan_form">工作总结及计划</li>
+				<li id="accessory_form">附件清单</li>
 			</ul>
 
 			<div class="tips_desc">
@@ -43,7 +46,7 @@
 
 		<div class="form_list">
 
-			<div class="apply_form" style="display: block;">
+			<div class="apply_form form_hide form_show">
 				<form action="">
 					
 					<div class="re_table basic_info">
@@ -108,7 +111,7 @@
 							<div class="table_item_td item_body"><input type="text" placeholder="手机"></div>
 							<div class="table_item_td item_body"><input type="text" placeholder="邮箱"></div>
 							<div class="table_item_td item_body"><input type="text" placeholder="专业"></div>
-							<div class="table_item_td item_operate"><a class="add">添加</a></div>
+							<div class="table_item_td item_operate"><a class="add" onclick="addPeople('creator',this)">添加</a></div>
 						</div>
 						<div class="table_item_tr">
 							<div class="table_item_td item_title">【联系人】</div>
@@ -116,7 +119,7 @@
 							<div class="table_item_td item_body"><input type="text" placeholder="手机"></div>
 							<div class="table_item_td item_body"><input type="text" placeholder="邮箱"></div>
 							<div class="table_item_td item_body"><input type="text" placeholder="专业"></div>
-							<div class="table_item_td item_operate"><a class="add">添加</a></div>
+							<div class="table_item_td item_operate"><a class="add" onclick="addPeople('links',this)">添加</a></div>
 						</div>
 						<div class="table_item_tr">
 							<div class="table_item_td item_title">【成员】</div>
@@ -124,7 +127,7 @@
 							<div class="table_item_td item_body"><input type="text" placeholder="手机"></div>
 							<div class="table_item_td item_body"><input type="text" placeholder="邮箱"></div>
 							<div class="table_item_td item_body"><input type="text" placeholder="专业"></div>
-							<div class="table_item_td item_operate"><a class="add">添加</a></div>
+							<div class="table_item_td item_operate"><a class="add" onclick="addPeople('member',this)">添加</a></div>
 						</div>
 						
 					</div>
@@ -154,13 +157,13 @@
 				</form>
 			</div>
 
-			<div class="project_form">
+			<div class="project_form form_hide">
 				
 				<form action="">
 					
 					<div class="title_info">
 						<span>广东省众创空间申报单位孵化项目（企业）一览表</span>
-						<a>新增企业</a>
+						<a onclick="addProject()">新增企业</a>
 						<div style="clear: both;"></div>
 					</div>
 
@@ -190,7 +193,7 @@
 							<div class="table_item_td item_body" style="width: 305px;">
 								<input type="text" placeholder="备注">
 							</div>
-							<div class="table_item_td item_operate" style="width: 200px;"><a class="add">删除</a></div>
+							<div class="table_item_td item_operate" style="width: 200px;"><a class="add" onclick="delTr(this)">删除</a></div>
 						</div>
 						<div class="table_item_tr">
 							<div class="table_item_td item_body" style="width: 220px;">
@@ -208,7 +211,7 @@
 							<div class="table_item_td item_body" style="width: 305px;">
 								<input type="text" placeholder="备注">
 							</div>
-							<div class="table_item_td item_operate" style="width: 200px;"><a class="add">删除</a></div>
+							<div class="table_item_td item_operate" style="width: 200px;"><a class="add" onclick="delTr(this)">删除</a></div>
 						</div>
 						<div class="table_item_tr">
 							<div class="table_item_td item_body" style="width: 220px;">
@@ -226,7 +229,7 @@
 							<div class="table_item_td item_body" style="width: 305px;">
 								<input type="text" placeholder="备注">
 							</div>
-							<div class="table_item_td item_operate" style="width: 200px;"><a class="add">删除</a></div>
+							<div class="table_item_td item_operate" style="width: 200px;"><a class="add" onclick="delTr(this)">删除</a></div>
 						</div>
 						<div class="table_item_tr">
 							<div class="table_item_td item_body" style="width: 220px;">
@@ -244,7 +247,7 @@
 							<div class="table_item_td item_body" style="width: 305px;">
 								<input type="text" placeholder="备注">
 							</div>
-							<div class="table_item_td item_operate" style="width: 200px;"><a class="add">删除</a></div>
+							<div class="table_item_td item_operate" style="width: 200px;"><a class="add" onclick="delTr(this)">删除</a></div>
 						</div>
 						
 					</div>
@@ -254,13 +257,13 @@
 				</form>
 			</div>
 
-			<div class="activity_form">
+			<div class="activity_form form_hide">
 				
 				<form action="">
 					
 					<div class="title_info">
 						<span>广东省众创空间申报单位活动一览表</span>
-						<a>新增活动</a>
+						<a onclick="addActivity()">新增活动</a>
 						<div style="clear: both;"></div>
 					</div>
 
@@ -311,7 +314,7 @@
 									<div style="clear: both;"></div>
 								</ul>
 							</div>
-							<div class="table_item_td item_operate" style="width: 90px;"><a class="add">删除</a></div>
+							<div class="table_item_td item_operate" style="width: 90px;"><a class="del" onclick="delHtr(this)">删除</a></div>
 						</div>
 
 						<div class="table_item_htr">
@@ -342,7 +345,7 @@
 									<div style="clear: both;"></div>
 								</ul>
 							</div>
-							<div class="table_item_td item_operate" style="width: 90px;"><a class="add">删除</a></div>
+							<div class="table_item_td item_operate" style="width: 90px;"><a class="del" onclick="delHtr(this)">删除</a></div>
 						</div>
 
 						<div class="table_item_htr">
@@ -373,7 +376,7 @@
 									<div style="clear: both;"></div>
 								</ul>
 							</div>
-							<div class="table_item_td item_operate" style="width: 90px;"><a class="add">删除</a></div>
+							<div class="table_item_td item_operate" style="width: 90px;"><a class="del" onclick="delHtr(this)">删除</a></div>
 						</div>
 
 					</div>
@@ -383,7 +386,7 @@
 				</form>
 			</div>
 
-			<div class="plan_form">
+			<div class="plan_form form_hide">
 				
 				<form action="">
 					
@@ -406,7 +409,7 @@
 				</form>
 			</div>
 
-			<div class="accessory_form">
+			<div class="accessory_form form_hide">
 				
 				<form action="">
 					
@@ -423,31 +426,60 @@
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p><span>*</span>1.众创空间所在单位的法人代码证书（或营业执照）复印件；</p></div>
-							<div class="table_item_td" style="width: 397px;"></div>
+							<div class="table_item_td" style="width: 798px;"><p><span style="color: red;">*</span>1.众创空间所在单位的法人代码证书（或营业执照）复印件；</p></div>
+							<div class="table_item_td" style="width: 397px;">
+								
+								<div class="img_box">
+									<img src="images/add_bg.png" alt="">
+									<span>附件压缩包</span>
+								</div>
+							</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p><span>*</span>2.众创空间场地证明（产权证明或租赁合同等）复印件；</p></div>
-							<div class="table_item_td" style="width: 397px;"></div>
+							<div class="table_item_td" style="width: 798px;"><p><span style="color: red;">*</span>2.众创空间场地证明（产权证明或租赁合同等）复印件；</p></div>
+							<div class="table_item_td" style="width: 397px;">
+								<div class="img_box">
+									<img src="images/add_bg.png" alt="">
+									<span>附件压缩包</span>
+								</div>
+							</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p><span>*</span>3.拥有种子资金或孵化资金的相关证明材料复印件（如：存款证明,设立孵化资金的文件，如何使用浮华资金的文件，已投资案例证明等）；</p></div>
-							<div class="table_item_td" style="width: 397px;"></div>
+							<div class="table_item_td" style="width: 798px;"><p style="line-height: 30px; padding: 30px 0px 20px 30px;"><span style="color: red;">*</span>3.拥有种子资金或孵化资金的相关证明材料复印件（如：存款证明,设立孵化资金的文件，如何使用浮华资金的文件，已投资案例证明等）；</p></div>
+							<div class="table_item_td" style="width: 397px;">
+								<div class="img_box">
+									<img src="images/add_bg.png" alt="">
+									<span>附件压缩包</span>
+								</div>
+							</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p>4.众创空间与合作的中介服务机构（包括法律事务所，会计事务所，咨询机构和风险投资机构等），或与孵化器，科技园区签署的未在孵项目服务的合作协议复印件。</p></div>
-							<div class="table_item_td" style="width: 397px;"></div>
+							<div class="table_item_td" style="width: 798px;"><p style="line-height: 30px; padding: 30px 0px 20px 30px;">4.众创空间与合作的中介服务机构（包括法律事务所，会计事务所，咨询机构和风险投资机构等），或与孵化器，科技园区签署的未在孵项目服务的合作协议复印件。</p></div>
+							<div class="table_item_td" style="width: 397px;">
+								<div class="img_box">
+									<img src="images/add_bg.png" alt="">
+									<span>附件压缩包</span>
+								</div>
+							</div>
 						</div>
 
 						<div class="table_item_htr">
 							<div class="table_item_td" style="width: 798px;"><p>5.其他证明材料。</p></div>
-							<div class="table_item_td" style="width: 397px;"></div>
+							<div class="table_item_td" style="width: 397px;">
+								<div class="img_box">
+									<img src="images/add_bg.png" alt="">
+									<span>附件压缩包</span>
+								</div>
+								
+							</div>
 						</div>
 
 					</div>
+
+					<div class="submit_btn"><a>提交保存</a></div>
 
 				</form>
 			</div>

@@ -151,6 +151,16 @@
 	background-image: url("../images/des_unfinish.png");
 }
 
+.register_body .form_list .form_hide
+{
+	display: none;
+}
+
+.register_body .form_list .form_show
+{
+	display: block;
+}
+
 .register_body .form_list .re_table
 {
 	border-color: #717171;
@@ -182,7 +192,6 @@
 {
 	border-bottom: 1px solid #717171;
     height: 110px;
-    line-height: 110px;
 }
 
 .register_body .form_list .table_item_tr .table_item_td
@@ -229,6 +238,7 @@
     border: medium none;
     border-radius: 3px;
     color: #fff;
+    cursor: pointer;
     display: inline-block;
     float: right;
     font-size: 14px;
@@ -316,6 +326,15 @@
 .register_body .form_list .apply_form .team_info .item_operate a.add
 {
 	color: blue;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.register_body .form_list .apply_form .team_info .item_operate a.del
+{
+    color: red;
+    cursor: pointer;
     font-size: 15px;
     text-decoration: underline;
 }
@@ -493,6 +512,7 @@
 .register_body .form_list .activity_form .table_item_htr .item_picture li
 {
 	display: inline-block;
+    height: 60px;
     position: relative;
     width: 78px;
 }
@@ -508,7 +528,11 @@
 
 .register_body .form_list .activity_form .table_item_htr .item_picture li span
 {
-
+	bottom: -46px;
+    color: #999;
+    left: 28px;
+    line-height: 20px;
+    position: absolute;
 }
 
 .register_body .form_list .activity_form .table_item_htr .item_operate
@@ -568,7 +592,41 @@
 .register_body .form_list .accessory_form .table_item_htr .table_item_td
 {
 	border-right: 1px solid #717171;
+    color: #333;
     display: table-cell;
-    height: 110px;
+    font-size: 15px;
     line-height: 110px;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td p
+{
+	padding-left: 30px;
+    width: 650px;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .img_box
+{
+	display: inline-block;
+    height: 60px;
+    position: relative;
+    width: 100px;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .img_box img
+{
+	height: 58px;
+    left: 10px;
+    position: absolute;
+    top: 15px;
+    width: 58px;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .img_box span
+{
+	bottom: -46px;
+    color: #999;
+    font-size: 12px;
+    left: 12px;
+    line-height: 20px;
+    position: absolute;
 }
