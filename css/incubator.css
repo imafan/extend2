@@ -184,8 +184,8 @@
 .register_body .form_list .table_item_tr
 {
 	border-bottom: 1px solid #717171;
-    height: 46px;
-    line-height: 46px;
+    /*height: 46px;*/
+    /*line-height: 46px;*/
 }
 
 .register_body .form_list .table_item_htr
@@ -199,7 +199,7 @@
 {
 	border-right: 1px solid #717171;
     display: table-cell;
-    line-height: 46px;
+    /*line-height: 46px;*/
 }
 
 .register_body .form_list .submit_btn
@@ -270,6 +270,7 @@
 .register_body .form_list .apply_form .basic_info .item_body
 {
 	width: 414px;
+    padding: 10px 0;
 }
 
 .register_body .form_list .apply_form .basic_info .item_body input
@@ -282,6 +283,19 @@
     margin-left: 10px;
     padding-left: 10px;
     width: 383px;
+}
+
+.register_body .form_list .apply_form .basic_info .item_body .select{
+    background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    margin-left: 10px;
+    height: 33px;
+    line-height: 33px;
+    color: #777;
+    width: 395px;
 }
 
 
@@ -780,3 +794,19 @@
 /*end孵化器服务功能*/
 
 
+.item_body input.error{
+    background-color: #ffdecf!important;
+    border-color: red!important;;
+    color: red!important;;
+}
+
+.item_body label.error{
+    float: left;
+    margin-left: 10px;
+    max-width: 393px;
+    text-align: left;
+    word-wrap: break-word;
+    color: red;
+    margin-top: 5px;
+    margin-left: 15px;
+}

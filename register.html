@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/register.css" />
 	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script src="js/ajaxfileupload.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/register.js"></script>
 
 </head>
@@ -298,18 +299,22 @@
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>通知</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>签到</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>现场1</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>现场2</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<div style="clear: both;"></div>
 								</ul>
@@ -329,18 +334,22 @@
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>通知</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>签到</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>现场1</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>现场2</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<div style="clear: both;"></div>
 								</ul>
@@ -360,18 +369,22 @@
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>通知</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>签到</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>现场1</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<li>
 										<img src="images/add_bg.png" alt="">
 										<span>现场2</span>
+										<input type="file" id="fileToUpload_3" name="fileToUpload" class="upload">
 									</li>
 									<div style="clear: both;"></div>
 								</ul>
@@ -421,58 +434,77 @@
 					<div class="re_table accessory_info">
 						
 						<div class="table_item_thead">
-							<div class="table_item_th" style="width: 798px;">附件内容</div>
-							<div class="table_item_th" style="width: 397px;">附件上传</div>
+							<div class="table_item_th" style="width: 65%;">附件内容</div>
+							<div class="table_item_th">附件上传</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p><span style="color: red;">*</span>1.众创空间所在单位的法人代码证书（或营业执照）复印件；</p></div>
-							<div class="table_item_td" style="width: 397px;">
+							<div class="table_item_td" style="width: 65%;"><span style="color: red;">*</span>1.众创空间所在单位的法人代码证书（或营业执照）复印件；</div>
+							<div class="table_item_td">
 								
-								<div class="img_box">
-									<img src="images/add_bg.png" alt="">
-									<span>附件压缩包</span>
-								</div>
+								<div class="zip_image">
+                                <img src="images/add_bg.png">
+                                <p>附件压缩包</p>
+                                <input type="file" id="fileToUpload_5" name="fileToUpload" class="upload">
+	                            </div>
+
+	                            <div class="info"></div>
 							</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p><span style="color: red;">*</span>2.众创空间场地证明（产权证明或租赁合同等）复印件；</p></div>
-							<div class="table_item_td" style="width: 397px;">
-								<div class="img_box">
-									<img src="images/add_bg.png" alt="">
-									<span>附件压缩包</span>
-								</div>
+							<div class="table_item_td" style="width: 65%;"><span style="color: red;">*</span>2.众创空间场地证明（产权证明或租赁合同等）复印件；</div>
+							<div class="table_item_td">
+								
+								<div class="zip_image">
+                                <img src="images/add_bg.png">
+                                <p>附件压缩包</p>
+                                <input type="file" id="fileToUpload_5" name="fileToUpload" class="upload">
+	                            </div>
+
+	                            <div class="info"></div>
 							</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p style="line-height: 30px; padding: 30px 0px 20px 30px;"><span style="color: red;">*</span>3.拥有种子资金或孵化资金的相关证明材料复印件（如：存款证明,设立孵化资金的文件，如何使用浮华资金的文件，已投资案例证明等）；</p></div>
-							<div class="table_item_td" style="width: 397px;">
-								<div class="img_box">
-									<img src="images/add_bg.png" alt="">
-									<span>附件压缩包</span>
-								</div>
+							<div class="table_item_td" style="width: 65%;"><span style="color: red;">*</span>3.拥有种子资金或孵化资金的相关证明材料复印件（如：存款证明,设立孵化资金的文件，如何使用浮华资金的文件，已投资案例证明等）；</div>
+							<div class="table_item_td">
+								
+								<div class="zip_image">
+                                <img src="images/add_bg.png">
+                                <p>附件压缩包</p>
+                                <input type="file" id="fileToUpload_5" name="fileToUpload" class="upload">
+	                            </div>
+
+	                            <div class="info"></div>
 							</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p style="line-height: 30px; padding: 30px 0px 20px 30px;">4.众创空间与合作的中介服务机构（包括法律事务所，会计事务所，咨询机构和风险投资机构等），或与孵化器，科技园区签署的未在孵项目服务的合作协议复印件。</p></div>
-							<div class="table_item_td" style="width: 397px;">
-								<div class="img_box">
-									<img src="images/add_bg.png" alt="">
-									<span>附件压缩包</span>
-								</div>
+							<div class="table_item_td" style="width: 65%;">4.众创空间与合作的中介服务机构（包括法律事务所，会计事务所，咨询机构和风险投资机构等），或与孵化器，科技园区签署的未在孵项目服务的合作协议复印件。</div>
+							<div class="table_item_td">
+								
+								<div class="zip_image">
+                                <img src="images/add_bg.png">
+                                <p>附件压缩包</p>
+                                <input type="file" id="fileToUpload_5" name="fileToUpload" class="upload">
+	                            </div>
+
+	                            <div class="info"></div>
 							</div>
 						</div>
 
 						<div class="table_item_htr">
-							<div class="table_item_td" style="width: 798px;"><p>5.其他证明材料。</p></div>
-							<div class="table_item_td" style="width: 397px;">
-								<div class="img_box">
-									<img src="images/add_bg.png" alt="">
-									<span>附件压缩包</span>
-								</div>
+							<div class="table_item_td" style="width: 65%;">5.其他证明材料。</div>
+							<div class="table_item_td">
+
+								<div class="zip_image">
+                                <img src="images/add_bg.png">
+                                <p>附件压缩包</p>
+                                <input type="file" id="fileToUpload_5" name="fileToUpload" class="upload">
+	                            </div>
+
+	                            <div class="info"></div>
 								
 							</div>
 						</div>

@@ -191,7 +191,10 @@
 .register_body .form_list .table_item_htr
 {
 	border-bottom: 1px solid #717171;
+    display: table;
     height: 110px;
+    line-height: 110px;
+    width: 100%;
 }
 
 .register_body .form_list .table_item_tr .table_item_td
@@ -535,6 +538,16 @@
     position: absolute;
 }
 
+.register_body .form_list .activity_form .table_item_htr .item_picture li input
+{
+    cursor: pointer;
+    height: 56px;
+    opacity: 0;
+    position: relative;
+    top: -9px;
+    width: 56px;
+}
+
 .register_body .form_list .activity_form .table_item_htr .item_operate
 {
 	text-align: center;
@@ -576,9 +589,11 @@
 	background-color: #eee;
     border-bottom: 2px solid #717171;
     color: #333;
+    display: table;
     font-size: 15px;
     height: 44px;
     line-height: 44px;
+    width: 100%;
 }
 
 .register_body .form_list .accessory_form .table_item_thead .table_item_th
@@ -592,41 +607,44 @@
 .register_body .form_list .accessory_form .table_item_htr .table_item_td
 {
 	border-right: 1px solid #717171;
-    color: #333;
     display: table-cell;
     font-size: 15px;
-    line-height: 110px;
+    line-height: normal;
+    padding: 20px;
+    vertical-align: middle;
 }
 
-.register_body .form_list .accessory_form .table_item_htr .table_item_td p
-{
-	padding-left: 30px;
-    width: 650px;
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image,
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .info{
+    display: inline-block;
 }
 
-.register_body .form_list .accessory_form .table_item_htr .img_box
-{
-	display: inline-block;
-    height: 60px;
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image{
+    width: 90px;
+    text-align: center;
+    max-height: 90px;
+    overflow: hidden;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image .upload{
+    opacity:0;
+    filter:alpha(opacity=0);
+    width: 56px;
+    height: 56px;
     position: relative;
-    width: 100px;
+    top: -87px;
+    cursor: pointer;
 }
 
-.register_body .form_list .accessory_form .table_item_htr .img_box img
-{
-	height: 58px;
-    left: 10px;
-    position: absolute;
-    top: 15px;
-    width: 58px;
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image p{
+    color: #ccc;
+    margin-top: 10px;
 }
 
-.register_body .form_list .accessory_form .table_item_htr .img_box span
-{
-	bottom: -46px;
-    color: #999;
-    font-size: 12px;
-    left: 12px;
-    line-height: 20px;
-    position: absolute;
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .info{
+    vertical-align: top;
+}
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .info .info_flow{
+    color: #ccc;
+    margin-top: 5px;
 }

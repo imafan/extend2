@@ -55,10 +55,10 @@ var addActivity = function(){
 			   '<div class="table_item_td" style="width: 100px;"><input type="text" placeholder="活动负责人"></div>'+
 			   '<div class="table_item_td" style="width: 120px;"><input type="text" placeholder="联系电话"></div>'+
 			   '<div class="table_item_td item_picture" style="width: 326px;">'+
-			   '<ul><li><img src="images/add_bg.png" alt=""><span>通知</span></li>'+
-			   '<li><img src="images/add_bg.png" alt=""><span>签到</span></li>'+
-			   '<li><img src="images/add_bg.png" alt=""><span>现场1</span></li>'+
-			   '<li><img src="images/add_bg.png" alt=""><span>现场2</span></li>'+
+			   '<ul><li><img src="images/add_bg.png" alt=""><span>通知</span><input type="file" id="fileToUpload_3" name="fileToUpload" class="upload"></li>'+
+			   '<li><img src="images/add_bg.png" alt=""><span>签到</span><input type="file" id="fileToUpload_3" name="fileToUpload" class="upload"></li>'+
+			   '<li><img src="images/add_bg.png" alt=""><span>现场1</span><input type="file" id="fileToUpload_3" name="fileToUpload" class="upload"></li>'+
+			   '<li><img src="images/add_bg.png" alt=""><span>现场2</span><input type="file" id="fileToUpload_3" name="fileToUpload" class="upload"></li>'+
 			   '<div style="clear: both;"></div></ul></div>'+
 			   '<div class="table_item_td item_operate" style="width: 90px;"><a class="del" onclick="delHtr(this)">删除</a></div></div>';
 	
@@ -95,4 +95,71 @@ $(function(){
 
 		$(".form_list").find("."+formName).addClass("form_show");
 	});
+
+    //附件上传
+	$(".accessory_form").on("change","input.upload:file",function(){
+        var $me = $(this);
+        var _fileElementId = $me.attr("id");
+
+        if(_fileElementId){
+            //TODO 文件类型、大小过滤
+
+            //上传
+            $.ajaxFileUpload ({
+                url :'demodata/upload.json',
+                secureuri :false,
+                fileElementId : _fileElementId.substring(1),
+                dataType : 'json',
+                success : function (res, status){
+
+                    if(res.success){
+
+                        alert("上传成功");
+
+                        $me.siblings("img").attr("src", res.data.url);
+
+                        $me.closest(".zip_image").siblings(".info").empty();
+                        var _infoHtml = "<dl><dt><a href='#'>" + res.data.name + "</a></dt>"
+                                        + "<dt class='info_flow'>" + res.data.size + "</dt></dl>";
+                        $me.closest(".zip_image").siblings(".info").append(_infoHtml);
+//                        $me.siblings(":not('img')").remove();
+                        $me.remove();
+                    }
+                },
+                error: function (data, status, e){
+                    console.info(e);
+                }
+            })
+        }
+    })
+
+	//图片上传
+    $(".activity_form").on("change","input.upload:file",function(){
+        var $me = $(this);
+        var _fileElementId = $me.attr("id");
+
+        if(_fileElementId){
+            //TODO 文件类型、大小过滤
+
+            //上传
+            $.ajaxFileUpload ({
+                url :'demodata/upload.json',
+                secureuri :false,
+                fileElementId : _fileElementId.substring(1),
+                dataType : 'json',
+                success : function (res, status){
+
+                    if(res.success){
+
+                        alert("上传成功");
+
+                        $me.siblings("img").attr("src", "images/change_bg.jpg");
+                    }
+                },
+                error: function (data, status, e){
+                    console.info(e);
+                }
+            })
+        }
+    })
 });
