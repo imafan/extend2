@@ -43,7 +43,7 @@ var delTr = function(handle){
 
 
 $(function(){
-
+    //TODO 表单中文提示，需要看具体情况修改
     $.extend($.validator.messages, {
         required: "不能为空！",
         remote: "请修正此字段",
@@ -64,6 +64,7 @@ $(function(){
         min: $.validator.format("请输入不小于 {0} 的数值")
     });
 
+    //TODO 表单验证，需要看具体情况修改
     $(".submit_btn a").click(function(){
 
         if($(this).closest("form").valid()){
