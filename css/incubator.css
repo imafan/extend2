@@ -644,6 +644,18 @@
 .register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image{
     width: 90px;
     text-align: center;
+    max-height: 90px;
+    overflow: hidden;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image .upload{
+    opacity:0;
+    filter:alpha(opacity=0);
+    width: 56px;
+    height: 56px;
+    position: relative;
+    top: -87px;
+    cursor: pointer;
 }
 
 .register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image p{

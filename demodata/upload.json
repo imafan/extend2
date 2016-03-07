@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "data":{
+      "url" : "images/zip.png",
+      "name": "test.zip",
+      "size": "30Kb"
+  }
+
+}
