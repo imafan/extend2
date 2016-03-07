@@ -362,59 +362,101 @@
     width: 1166px;
 }
 
-/* 项目一览表 */
+/* 在孵企业情况 */
+.register_body .form_list .company_table .company_info{
+    display: table;
+    width: 100%;
+}
+.register_body .form_list .company_table .table_item_thead > div,
+.register_body .form_list .company_table .table_item_tr > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
 
-.register_body .form_list .project_form .table_item_thead
+.register_body .form_list .company_table .table_item_thead
 {
 	background-color: #eee;
     border-bottom: 2px solid #717171;
     color: #333;
     font-size: 15px;
-    height: 44px;
-    line-height: 44px;
 }
 
-.register_body .form_list .project_form .table_item_thead .table_item_th
+.register_body .form_list .company_table .table_item_thead .table_item_th
 {
 	border-right: 1px solid #717171;
-    display: table-cell;
-    text-align: center;
+    padding: 10px;
 }
 
-.register_body .form_list .project_form .table_item_tr .item_body input
+
+
+.register_body .form_list .company_table .table_item_tr .item_body input
 {
 	background-color: #ccf0ff;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     height: 33px;
-    margin-left: 6px;
     padding-left: 10px;
-    width: 132px;
+    width: 80%;
 }
 
-.register_body .form_list .project_form .table_item_tr .item_body:first-child input
-{
-	width: 195px;
-}
-
-.register_body .form_list .project_form .table_item_tr .item_body:nth-child(5) input
-{
-	width: 280px;
-}
-
-.register_body .form_list .project_form .table_item_tr .item_operate
-{
-	text-align: center;
-}
-
-.register_body .form_list .project_form .table_item_tr .item_operate a
+.register_body .form_list .company_table .table_item_tr .item_operate a
 {
 	color: red;
     cursor: pointer;
     font-size: 15px;
     text-decoration: underline;
 }
+/* end在孵企业情况 */
+
+/* 毕业企业情况 */
+.register_body .form_list .graduate_table .company_info{
+    display: table;
+    width: 100%;
+}
+.register_body .form_list .graduate_table .table_item_thead > div,
+.register_body .form_list .graduate_table .table_item_tr > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.register_body .form_list .graduate_table .table_item_thead
+{
+    background-color: #eee;
+    border-bottom: 2px solid #717171;
+    color: #333;
+    font-size: 15px;
+}
+
+.register_body .form_list .graduate_table .table_item_thead .table_item_th
+{
+    border-right: 1px solid #717171;
+    padding: 5px;
+}
+
+
+
+.register_body .form_list .graduate_table .table_item_tr .item_body input
+{
+    background-color: #ccf0ff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 33px;
+    padding-left: 10px;
+    width: 80%;
+}
+
+.register_body .form_list .company_table .table_item_tr .item_operate a
+{
+    color: red;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: underline;
+}
+/* end毕业企业情况 */
 
 /* 活动样式 */
 
@@ -545,7 +587,10 @@
 }
 
 /* 附件样式*/
-
+.register_body .form_list .accessory_form .accessory_info > div{
+    display: table;
+    width: 100%;
+}
 
 .register_body .form_list .accessory_form .table_item_thead
 {
@@ -557,20 +602,61 @@
     line-height: 44px;
 }
 
+
 .register_body .form_list .accessory_form .table_item_thead .table_item_th
 {
 	border-right: 1px solid #717171;
     display: table-cell;
     text-align: left;
     text-indent: 30px;
+
 }
 
 .register_body .form_list .accessory_form .table_item_htr .table_item_td
 {
 	border-right: 1px solid #717171;
     display: table-cell;
-    height: 110px;
-    line-height: 110px;
+    vertical-align: middle;
+    padding: 20px;
+    font-size: 15px;
+    /*height: 110px;*/
+    /*line-height: 110px;*/
+    line-height: normal;
+}
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .necesarry{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.register_body .form_list .accessory_form .table_item_thead .table_item_th:first-child,
+.register_body .form_list .accessory_form .table_item_htr .table_item_td:first-child{
+    width: 65%;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image,
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .info{
+    display: inline-block;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image{
+    width: 90px;
+    text-align: center;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .zip_image p{
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .info{
+    vertical-align: top;
+}
+.register_body .form_list .accessory_form .table_item_htr .table_item_td .info .info_flow{
+    color: #ccc;
+    margin-top: 5px;
 }
 
 /*孵化器规模*/
